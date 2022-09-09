@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Michroma';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/public/assets/fonts/Michroma.ttf');
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0 auto;
+  background: linear-gradient(120.5deg, rgba(102, 128, 255, 0.2) 2.71%, rgba(5, 232, 194, 0.2) 96.76%), #000000;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: linear-gradient(120.5deg, rgba(102, 128, 255, 0.2) 2.71%, rgba(5, 232, 194, 0.2) 96.76%), #000000;
+  }
+}
