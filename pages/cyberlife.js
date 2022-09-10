@@ -49,7 +49,6 @@ export default function CyberLife() {
           <img className="enter" src="assets/image/enter.png" alt="enter" />
         </div>
         <div className="p-8 lg:p-8 xl:p-16 2xl:p-20 mt-8">
-          <InvestorCollection />
           <div className="flex flex-row flex-wrap">
             <div className="basis-full lg:basis-1/3 p-4">
               <div className="">
