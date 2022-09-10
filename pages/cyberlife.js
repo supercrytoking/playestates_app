@@ -91,7 +91,7 @@ export default function CyberLife() {
                   <div>
                     <div className="flex justify-between items-center">
                       <img
-                        src="/assets/image/cyberlife/button1.png"
+                        src="/assets/image/cyberlife/Button1.png"
                         alt="button1"
                       />
                       <span className="px-2">342.2456 SOL</span>
@@ -99,12 +99,12 @@ export default function CyberLife() {
                   </div>
                   <div className="flex flex-row">
                     <img
-                      src="/assets/image/cyberlife/button1.png"
+                      src="/assets/image/cyberlife/Button1.png"
                       alt="button1"
                       className="mx-1"
                     />
                     <img
-                      src="/assets/image/cyberlife/button2.png"
+                      src="/assets/image/cyberlife/Button2.png"
                       alt="button2"
                       className="mx-1"
                     />

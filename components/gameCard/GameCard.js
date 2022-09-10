@@ -129,11 +129,9 @@ function GameCard({ gameCard }) {
         @media screen and (max-width: 450px) {
           .card-container {
             width: 100%;
-            padding: 0 2rem;
           }
           .card-image {
             width: 100%;
-            padding: 0 2rem;
           }
         }
       `}</style>

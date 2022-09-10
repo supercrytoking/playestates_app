@@ -89,7 +89,19 @@ export default function Home({ rotate }) {
 					/>
 				</Head>
 				<Header />
-
+				<video autoPlay loop muted className="absolute inset-0 object-cover h-full videoIndex2 xl:h-full w-full">
+					{current == 0 ? (
+						<source
+							src="assets/image/bg1.webm"
+							type="video/webm"
+						/>
+					) : (
+						<source
+							src="assets/image/bg.webm"
+							type="video/webm"
+						/>
+					)}
+				</video>
 				{(() => {
 					switch (current) {
 						case 0:
