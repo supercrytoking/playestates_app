@@ -30,9 +30,7 @@ export default function Collections() {
       <main className="cyber-life">
         <div className="banner">
           <Header />
-          <div className="hidden md:block">
-            <IconBar />
-          </div>
+
           <div className="bannertitle">
             <span className="subtitle">Explore</span>
             <span className="maintitle">Games for you</span>

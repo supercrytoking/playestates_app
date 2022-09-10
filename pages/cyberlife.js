@@ -34,9 +34,7 @@ export default function CyberLife() {
       <main className="cyber-life">
         <div className="banner">
           <Header />
-          <div className="hidden md:block">
-            <IconBar />
-          </div>
+
           <div className="bannertitle">
             <div className="flex">
               <button className="actionBtn">ACTION</button>

@@ -4,7 +4,7 @@ import Header from "../components/header/Header";
 import Link from "next/link";
 import LeaderTable from "../components/leaderBoard/LeaderTable";
 import InvestorCollection from "../components/investorCollection/InvestorCollection";
-import Footer from "../components/footer/Footer";
+import Footer from "../components/footer/footer";
 
 export default function CyberLife() {
   return (
