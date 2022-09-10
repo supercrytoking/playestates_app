@@ -54,7 +54,6 @@ export default function Home({ rotate }) {
 		setBgImg(styles.container2);
 		setCurrent(current + 1);
 		console.log("current1", current);
-
 	}
 
 	const changeLayout = () => {
@@ -89,64 +88,30 @@ export default function Home({ rotate }) {
 					/>
 				</Head>
 				<Header />
-				<video autoPlay loop muted className="absolute inset-0 object-cover h-full videoIndex2 xl:h-full w-full">
-					{current == 0 ? (
+				{
+					current === 0 &&
+					<video autoPlay loop muted className="absolute inset-0 object-cover h-full videoIndex xl:h-full w-full">
 						<source
-							src="assets/image/bg1.webm"
+							src={`assets/image/bg.webm`}
 							type="video/webm"
 						/>
-					) : (
+					</video>
+				}
+				{
+					current === 1 &&
+					<video autoPlay loop muted className="absolute inset-0 object-cover h-full videoIndex xl:h-full w-full">
 						<source
-							src="assets/image/bg.webm"
+							src={`assets/image/bg1.webm`}
 							type="video/webm"
 						/>
-					)}
-				</video>
-				{(() => {
-					switch (current) {
-						case 0:
-							return (
-								<>
-									<video autoPlay loop muted className="absolute inset-0 object-cover h-full videoIndex2 xl:h-full w-full">
-										<source
-											src="assets/image/bg.webm"
-											type="video/webm"
-										/>
-									</video>
-
-								</>
-
-							)
-						case 1:
-							return (
-								<>
-									<video autoPlay loop muted className="absolute inset-0 object-cover h-full videoIndex2 xl:h-full w-full videoIndex2">
-										<source
-											src="assets/image/bg1.webm"
-											type="video/webm"
-										/>
-									</video>
-
-								</>
-
-							)
-
-						default:
-							return null
-					}
-				})()}
+					</video>
+				}
 				<>
 					{(() => {
 						switch (current) {
 							case 0:
 								return (
 									<>
-										{/* <video autoPlay loop muted className="absolute inset-0 object-cover h-full videoIndex xl:h-full w-full">
-											<source
-												src="assets/image/bg.webm"
-												type="video/webm"
-											/>
-										</video> */}
 										<motion.main
 											className={styles.main}
 											initial={{ y: 1000, opacity: 0 }}
@@ -219,12 +184,6 @@ export default function Home({ rotate }) {
 							case 1:
 								return (
 									<>
-										{/* <video autoPlay muted className="absolute inset-0 object-cover h-full videoIndex2 xl:h-full w-full videoIndex2">
-											<source
-												src="assets/image/bg1.webm"
-												type="video/webm"
-											/>
-										</video> */}
 										<main className={styles.main}>
 											<div className={styles.mainContent}>
 												<motion.h1
@@ -291,7 +250,6 @@ export default function Home({ rotate }) {
 						}
 					})()}
 				</>
-
 
 			</motion.div >
 			<style jsx>{`
