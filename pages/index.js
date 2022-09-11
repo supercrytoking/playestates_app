@@ -165,7 +165,7 @@ export default function Home({ rotate }) {
 										>
 											<img
 												className={styles.socialBtn}
-												src="/assets/image/instagram.png"
+												src="/assets/image/Instagram.png"
 												alt=""
 											/>
 											<img
