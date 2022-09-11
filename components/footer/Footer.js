@@ -11,53 +11,55 @@ function Footer() {
             <img src="/assets/image/logo.png" className="" alt="logo" />
           </Link>
         </div>
-        <div className="flex flex-row justify-center lg:justify-between">
-          <div className="basis-1/2">
-            <div className="flex flex-col md:flex-row justify-center sm:justify-around">
-              <li className="footer-item">
-                <Link href="#" activeClassName="active">
-                  <span className="footer-links">Expoverse</span>
-                </Link>
-              </li>
-              <li className="footer-item">
-                <Link href="#" activeClassName="active">
-                  <span className="footer-links">Lightpaper</span>
-                </Link>
-              </li>
-              <li className="footer-item">
-                <Link href="#" activeClassName="active">
-                  <span className="footer-links">Roadmap</span>
-                </Link>
-              </li>
-              <li className="footer-item">
-                <Link href="#" activeClassName="active">
-                  <span className="footer-links">Team</span>
-                </Link>
-              </li>
+        <div className="flex justify-center">
+          <div className="max-w-4xl flex flex-row justify-center lg:justify-between">
+            <div className="basis-1/2">
+              <div className="flex flex-col md:flex-row justify-center sm:justify-around">
+                <li className="footer-item">
+                  <Link href="#" activeClassName="active">
+                    <span className="footer-links">Expoverse</span>
+                  </Link>
+                </li>
+                <li className="footer-item">
+                  <Link href="#" activeClassName="active">
+                    <span className="footer-links">Lightpaper</span>
+                  </Link>
+                </li>
+                <li className="footer-item">
+                  <Link href="#" activeClassName="active">
+                    <span className="footer-links">Roadmap</span>
+                  </Link>
+                </li>
+                <li className="footer-item">
+                  <Link href="#" activeClassName="active">
+                    <span className="footer-links">Team</span>
+                  </Link>
+                </li>
+              </div>
             </div>
-          </div>
-          <div className="basis-1/2">
-            <div className="flex flex-col md:flex-row justify-center sm:justify-around">
-              <li className="footer-item">
-                <Link href="#" activeClassName="active">
-                  <span className="footer-links">FAQ</span>
-                </Link>
-              </li>
-              <li className="footer-item">
-                <Link href="#" activeClassName="active">
-                  <span className="footer-links">About</span>
-                </Link>
-              </li>
-              <li className="footer-item">
-                <Link href="#" activeClassName="active">
-                  <span className="footer-links">Contact</span>
-                </Link>
-              </li>
-              <li className="footer-item">
-                <Link href="#" activeClassName="active">
-                  <span className="footer-links">Subscribe</span>
-                </Link>
-              </li>
+            <div className="basis-1/2">
+              <div className="flex flex-col md:flex-row justify-center sm:justify-around">
+                <li className="footer-item">
+                  <Link href="#" activeClassName="active">
+                    <span className="footer-links">FAQ</span>
+                  </Link>
+                </li>
+                <li className="footer-item">
+                  <Link href="#" activeClassName="active">
+                    <span className="footer-links">About</span>
+                  </Link>
+                </li>
+                <li className="footer-item">
+                  <Link href="#" activeClassName="active">
+                    <span className="footer-links">Contact</span>
+                  </Link>
+                </li>
+                <li className="footer-item">
+                  <Link href="#" activeClassName="active">
+                    <span className="footer-links">Subscribe</span>
+                  </Link>
+                </li>
+              </div>
             </div>
           </div>
         </div>
@@ -92,7 +94,7 @@ function Footer() {
           line-height: 40px;
           font-family: "Inter";
           font-style: normal;
-          margin: 0px 8px;
+          margin: 0.25rem 1.25rem;
         }
 
         .footer-item:after {
@@ -118,10 +120,9 @@ function Footer() {
         .footer-links {
           font-family: "Inter";
           font-style: normal;
-          font-weight: 600;
-          font-size: 18px;
-          text-align: center;
-          line-height: 22px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 130%;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -129,7 +130,15 @@ function Footer() {
           cursor: pointer;
         }
         .footer-links:hover {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 130%;
+          display: flex;
+          align-items: center;
           color: #05e8c2;
+          transition: 0.5s;
         }
         .social-icon {
           display: flex;

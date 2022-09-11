@@ -1,40 +1,48 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-css-tags */
 import { useState, useEffect } from "react";
-import Head from "next/head";
 import Header from "../components/header/Header";
-import styles from "../styles/Home.module.css";
 import Title from "../components/title/Title";
 import NFTcard from "../components/NFTcards/NFTcard";
 import cardDatas from "../lib/cyberLife.json";
 import GameCard from "../components/gameCard/GameCard";
 import Accordion from "../components/accordian/Accordian";
 import DepositeModal from "../components/depositeModal/DepositeModal";
-import IconBar from "../components/iconBar/IconBar";
-import InvestorCollection from "../components/investorCollection/InvestorCollection";
 import Footer from "../components/footer/Footer";
+import WithdrawModal from "../components/withdrawModal/WithdrawModal";
+import ProgressBar from "../components/progressBar/ProgressBar";
+import LoadingBar from "../components/loadingBar/LoadingBar";
+import Summary from "../components/cyberlife/Summary";
+import StatusBars from "../components/cyberlife/StatusBars";
 
 export default function CyberLife() {
   const moreTitle = "Similar games";
   const [nftCardData, setCardData] = useState([]);
-  const [open, setOpen] = useState(false);
+  const [openDeposit, setOpenDeposit] = useState(false);
+  const [openWithdraw, setOpenWithdraw] = useState(false);
 
   useEffect(() => {
     setCardData(cardDatas);
   }, []);
 
-  const openModal = () => {
-    setOpen(true);
+  const openDepositModal = () => {
+    setOpenDeposit(true);
   };
-  const changeOpen = () => {
-    setOpen(false);
+  const changeOpenDeposit = () => {
+    setOpenDeposit(false);
+  };
+  const openWithdrawModal = () => {
+    setOpenWithdraw(true);
+  };
+  const changeOpenWithdraw = () => {
+    setOpenWithdraw(false);
   };
   return (
     <div className="">
       <main className="cyber-life">
         <div className="banner">
           <Header />
-
+          <div className="hidden md:block"></div>
           <div className="bannertitle">
             <div className="flex">
               <button className="actionBtn">ACTION</button>
@@ -48,130 +56,9 @@ export default function CyberLife() {
           </div>
           <img className="enter" src="assets/image/enter.png" alt="enter" />
         </div>
-        <div className="p-8 lg:p-8 xl:p-16 2xl:p-20 mt-8">
-          <div className="flex flex-row flex-wrap">
-            <div className="basis-full lg:basis-1/3 p-4">
-              <div className="">
-                <div className="slider">
-                  <div className="flex justify-between py-4">
-                    <span>Achievement</span>
-                    <span>51/57</span>
-                  </div>
-                  <div className="mb-8">
-                    <img
-                      className="fix-image"
-                      src="/assets/image/cyberlife/slider.png"
-                      alt="slider"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="basis-full lg:basis-1/3 p-4">
-              <div className="">
-                <div className="downloading">
-                  <div className="flex justify-between py-4">
-                    <span>Downloading</span>
-                    <span>27MB / 100MB</span>
-                  </div>
-                  <div className="mb-8">
-                    <img
-                      className="fix-image"
-                      src="/assets/image/cyberlife/download.png"
-                      alt="download"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="min-w-400 basis-full lg:basis-1/3 p-4">
-              <div className="balance">
-                <h3 className="py-4">Balance</h3>
-                <div className="flex justify-between items-center my-1">
-                  <div>
-                    <div className="flex justify-between items-center">
-                      <img
-                        src="/assets/image/cyberlife/Button1.png"
-                        alt="button1"
-                      />
-                      <span className="px-2">342.2456 SOL</span>
-                    </div>
-                  </div>
-                  <div className="flex flex-row">
-                    <img
-                      src="/assets/image/cyberlife/Button1.png"
-                      alt="button1"
-                      className="mx-1"
-                    />
-                    <img
-                      src="/assets/image/cyberlife/Button2.png"
-                      alt="button2"
-                      className="mx-1"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="summary py-12">
-            <div className="flex flex-row flex-wrap">
-              <div className="basis-full lg:basis-1/2 px-4">
-                <div className="pt-8">
-                  <h1>
-                    <span className="mr-4">
-                      <img
-                        src="/assets/image/cyberlife/info-circle.png"
-                        alt="info-circle"
-                      />
-                    </span>
-                    Description
-                  </h1>
-                </div>
-                <div className="description mt-8">
-                  <p className="text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Tortor ipsum orci massa mauris tellus adipiscing risus quam.
-                    In nulla sed sit quis augue euismod maecenas risus. Sit
-                    risus, amet viverra lectus risus scelerisque elit. Odio
-                    semper massa nisi quisque fringilla sit. Facilisis odio
-                    habitant ut nulla scelerisque.
-                  </p>
-                  <p className="mt-8 text-justify">
-                    Sit risus, amet viverra lectus risus scelerisque elit. Odio
-                    semper massa nisi quisque fringilla sit. Facilisis odio
-                    habitant ut nulla scelerisque.
-                  </p>
-                </div>
-              </div>
-              <div className="basis-full lg:basis-1/2 px-4">
-                <div className="pt-8">
-                  <h1>
-                    <span className="mr-4">
-                      <img
-                        src="/assets/image/cyberlife/message-question.png"
-                        alt="message-question"
-                      />
-                    </span>
-                    FAQ
-                  </h1>
-                </div>
-                <div className="accordians mt-8">
-                  <Accordion
-                    title="Kortor ipsum orci massa mauris tellus adipiscing risus quam?"
-                    content="this is content 1"
-                  />
-                  <Accordion
-                    title="Mauris tellus adipiscing risus quam?"
-                    content="this is content 2"
-                  />
-                  <Accordion
-                    title="Wdipiscing risus quam?"
-                    content="this is content 2"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="cyberlife-main p-4 sm:p-8 md:p-24 lg:p-8 xl:p-16 2xl:p-20 mt-8">
+          <StatusBars />
+          <Summary />
           <div className="flex justify-between flex-wrap items-center px-4">
             <div className="flex items-center my-4">
               <span>
@@ -183,33 +70,46 @@ export default function CyberLife() {
               <input className="nft-search" placeholder="Search" />
             </div>
           </div>
-          <div className="mt-8 px-4">
-            <div className="flex justify-around flex-wrap">
+          <div className="mt-8">
+            <div className="nft-cards grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-1 sm:gap-2 md:gap-3 xl:gap-4">
               {nftCardData.cardDatas
                 ? nftCardData.cardDatas.map((items, i) => (
-                  <div onClick={openModal} key={`${items.imgAlt1}-${i}`}>
-                    <NFTcard cardData={items} />
-                  </div>
-                ))
+                    <div
+                      onClick={openDepositModal}
+                      key={`${items.imgAlt1}-${i}`}
+                    >
+                      <NFTcard cardData={items} />
+                    </div>
+                  ))
                 : "Loading..."}
             </div>
             <div>
               <div className="my-8">
                 <Title title={moreTitle} />
               </div>
-              <div className="flex justify-around flex-wrap">
+              <div className="game-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-1 sm:gap-2 md:gap-3 xl:gap-4">
                 {nftCardData.similarGames
                   ? nftCardData.similarGames.map((items, i) => (
-                    <GameCard
-                      gameCard={items}
-                      key={`${items.gImgAlt1}-${i}`}
-                    />
-                  ))
+                      <div
+                        key={`${items.gImgAlt1}-${i}`}
+                        onClick={openWithdrawModal}
+                        className="flex justify-center"
+                      >
+                        <GameCard gameCard={items} />
+                      </div>
+                    ))
                   : "Loading..."}
               </div>
             </div>
           </div>
-          <DepositeModal bool={open} changeOpen={() => changeOpen()} />
+          <DepositeModal
+            bool={openDeposit}
+            changeOpenDeposit={() => changeOpenDeposit()}
+          />
+          <WithdrawModal
+            bool={openWithdraw}
+            changeOpenWithdraw={() => changeOpenWithdraw()}
+          />
         </div>
       </main>
       <Footer />
@@ -222,6 +122,10 @@ export default function CyberLife() {
               rgba(5, 232, 194, 0.2) 96.76%
             ),
             #000000;
+        }
+        .cyberlife-main {
+          max-width: 1920px;
+          margin: auto;
         }
         .banner {
           position: relative;
@@ -316,68 +220,7 @@ export default function CyberLife() {
           border-style: solid;
           border-image: linear-gradient(to right, #6680ff, #14d8cb) 1;
         }
-        .summary {
-          height: fit-content;
-        }
-        .summary h1 {
-          font-family: "Michroma";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 36px;
-          line-height: 51px;
-          display: flex;
-          align-items: center;
-          color: #ffffff;
-        }
-        .description {
-          font-family: "Inter";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 140%;
-          color: #9ea7ac;
-        }
-        .slider {
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.4),
-              rgba(0, 0, 0, 0.4)
-            ),
-            rgba(20, 216, 203, 0.1);
-          border-width: 1px;
-          border-style: solid;
-          border-image: linear-gradient(to right, #14d8cb, #6680ff) 1;
-          padding: 20px;
-        }
-        .downloading {
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.4),
-              rgba(0, 0, 0, 0.4)
-            ),
-            rgba(20, 216, 203, 0.1);
-          border-width: 1px;
-          border-style: solid;
-          border-image: linear-gradient(to right, #14d8cb, #6680ff) 1;
-          padding: 20px;
-        }
-        .balance {
-          border-width: 1px;
-          border-style: solid;
-          border-image: linear-gradient(to right, #14d8cb, #6680ff) 1;
-          padding: 20px;
-          background: linear-gradient(
-              0deg,
-              rgba(0, 0, 0, 0.4),
-              rgba(0, 0, 0, 0.4)
-            ),
-            rgba(20, 216, 203, 0.1);
-        }
-        .balance img {
-          width: 40px;
-          height: 40px;
-        }
-        @media screen and (max-width: 1142px) {
+        @media screen and (max-width: 1160px) {
           .fix-image {
             width: 100%;
           }
@@ -385,6 +228,11 @@ export default function CyberLife() {
         @media screen and (max-width: 920px) {
           .fix-image {
             width: 100%;
+          }
+          .game-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
           }
         }
         @media screen and (max-width: 768px) {
@@ -401,18 +249,38 @@ export default function CyberLife() {
           .maintitle {
             font-size: 40px;
           }
+          .game-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
         }
         @media screen and (max-width: 400px) {
           .banner {
             height: 300px;
           }
-
           .bannertitle {
             left: 40px;
             bottom: 20px;
           }
           .maintitle {
             font-size: 30px;
+          }
+          .nft-title {
+            font-size: 22px;
+          }
+          .nft-search {
+            width: 100%;
+          }
+          .nft-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+          .game-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
           }
         }
       `}</style>

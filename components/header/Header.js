@@ -242,7 +242,12 @@ function Header() {
           .hide-menu {
             display: block;
             position: absolute;
-            background: linear-gradient(120.5deg, rgba(102, 128, 255, 0.2) 2.71%, rgba(5, 232, 194, 0.2) 96.76%), #000000;
+            background: linear-gradient(
+                120.5deg,
+                rgba(102, 128, 255, 0.2) 2.71%,
+                rgba(5, 232, 194, 0.2) 96.76%
+              ),
+              #000000;
             opacity: 1;
             transition: all 0.8s ease;
             top: 6.5rem;

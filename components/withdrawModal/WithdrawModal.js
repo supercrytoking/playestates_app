@@ -7,7 +7,7 @@ import Modal from "react-modal";
 
 Modal.setAppElement("div");
 
-export default function DepositeModal({ bool, changeOpenDeposit }) {
+export default function WithdrawModal({ bool, changeOpenWithdraw }) {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     setIsOpen(bool);
@@ -15,13 +15,13 @@ export default function DepositeModal({ bool, changeOpenDeposit }) {
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
-    changeOpenDeposit();
+    changeOpenWithdraw();
   };
 
   const [contentFlag, setContentFlag] = useState(true);
   const [txFlag, setTxFlag] = useState(true);
 
-  const deposit = () => {
+  const withdraw = () => {
     setContentFlag(!contentFlag);
   };
   const confirmTx = () => {
@@ -33,7 +33,7 @@ export default function DepositeModal({ bool, changeOpenDeposit }) {
     return (
       <div>
         <div className={styles.modalTitle}>
-          <h1>Deposit my balance</h1>
+          <h1>Withdraw</h1>
         </div>
         <div className={styles.modalSubTitle}>
           Eu, hendrerit adipiscing pulvinar diam tincidunt ac amet eu. Nulla
@@ -53,8 +53,8 @@ export default function DepositeModal({ bool, changeOpenDeposit }) {
             </div>
           </div>
         </div>
-        <button onClick={deposit} className={styles.actionBtn}>
-          Deposit
+        <button onClick={withdraw} className={styles.actionBtn}>
+          Withdraw
         </button>
       </div>
     );

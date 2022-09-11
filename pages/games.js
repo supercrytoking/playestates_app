@@ -42,7 +42,7 @@ export default function Collections() {
             <div className="mb-8 px-4">
               <Title title={popular} />
             </div>
-            <div className="flex flex-wrap justify-around mt-20 mb-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-1 sm:gap-2 md:gap-3 xl:gap-4 my-20">
               {gamesCardData.popularDatas
                 ? gamesCardData.popularDatas.map((items, i) => (
                   <GameCard gameCard={items} key={`${items.imgAlt1}-${i}`} />
@@ -54,7 +54,7 @@ export default function Collections() {
             <div className="mb-8 px-4">
               <Title title={newest} />
             </div>
-            <div className="flex flex-wrap justify-around mt-20 mb-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-1 sm:gap-2 md:gap-3 xl:gap-4 my-20">
               {gamesCardData.newestDatas
                 ? gamesCardData.newestDatas.map((items, i) => (
                   <GameCard gameCard={items} key={`${items.imgAlt1}-${i}`} />
@@ -66,7 +66,7 @@ export default function Collections() {
             <div className="mb-8 px-4">
               <Title title={bestSellers} />
             </div>
-            <div className="flex flex-wrap justify-around mt-20 mb-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-1 sm:gap-2 md:gap-3 xl:gap-4 my-20">
               {gamesCardData.bestSellerDatas
                 ? gamesCardData.bestSellerDatas.map((items, i) => (
                   <GameCard gameCard={items} key={`${items.imgAlt1}-${i}`} />
@@ -78,7 +78,7 @@ export default function Collections() {
             <div className="mb-8 px-4">
               <Title title={explore} />
             </div>
-            <div className="flex flex-wrap justify-around mt-20 mb-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-1 sm:gap-2 md:gap-3 xl:gap-4 my-20">
               {gamesCardData.exploreDatas
                 ? gamesCardData.exploreDatas.map((items, i) => (
                   <GameCard gameCard={items} key={`${items.imgAlt1}-${i}`} />

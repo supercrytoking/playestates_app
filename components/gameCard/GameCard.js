@@ -39,15 +39,14 @@ function GameCard({ gameCard }) {
       </div>
 
       <style jsx>{`
-        .card-container {
+       .card-container {
           position: relative;
-          width: 370px;
+          width: 100%;
           height: 100%;
           color: white;
-          // margin: 20px 5px;
         }
         .card-image {
-          width: 370px;
+          width: 100%;
           margin: 1rem auto;
         }
         .image {
@@ -67,12 +66,8 @@ function GameCard({ gameCard }) {
           align-items: flex-start;
           padding: 4px 10px;
           gap: 10px;
-
           width: 67px;
           height: 23px;
-
-          /* Primary/Cyan */
-
           background: #15c3f4;
           border-radius: 5px;
         }
@@ -84,7 +79,6 @@ function GameCard({ gameCard }) {
           font-size: 12px;
           line-height: 15px;
           text-transform: uppercase;
-
           color: #ffffff;
         }
 
@@ -94,12 +88,8 @@ function GameCard({ gameCard }) {
           align-items: flex-start;
           padding: 0px;
           gap: 10px;
-
           width: 58px;
           height: 24px;
-
-          /* Inside auto layout */
-
           flex: none;
           order: 1;
           flex-grow: 0;

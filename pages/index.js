@@ -143,18 +143,19 @@ export default function Home({ rotate }) {
 														</div>
 													</div>
 												</motion.div>
+												<motion.div
+													className={styles.earth}
+													initial={{ y: 1000, opacity: 0 }}
+													animate={{ y: 0, opacity: 1 }}
+													exit={{ y: -10, opacity: 0 }}
+													transition={{ duration: 2.5 }}
+													onClick={changeStyle}
+												>
+													<img src="/assets/image/earth2.png" alt="earth" />
+												</motion.div>
 											</div>
 
-											<motion.div
-												className={styles.earth}
-												initial={{ y: 1000, opacity: 0 }}
-												animate={{ y: 0, opacity: 1 }}
-												exit={{ y: -10, opacity: 0 }}
-												transition={{ duration: 2.5 }}
-												onClick={changeStyle}
-											>
-												<img src="/assets/image/earth2.png" alt="earth" />
-											</motion.div>
+
 										</motion.main>
 										<motion.div
 											className={styles.social}

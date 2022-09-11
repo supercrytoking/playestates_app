@@ -77,8 +77,12 @@ const Wallet = () => {
             display: none;
           }
         }
-        @media screen and (max-width: 576px) {
-          padding: 12px 6px;
+        @media screen and (max-width: 375px) {
+          .walletBtn {
+            padding: 0.3rem;
+            width: 30px;
+            height: 30px;
+          }
         }
       `}</style>
     </div>

@@ -101,7 +101,8 @@
 }
 
 .earth {
-  position: absolute;
+  /* position: absolute; */
+  width: 100%;
   right: 0;
   left: 0;
   top: 0;
@@ -116,7 +117,9 @@
 	cursor: pointer;
 }
 .earth img {
-  max-width: fit-content;
+  position: fixed;
+  /* max-width: fit-content; */
+  /* left: 50%; */
 }
 
 .collectiontitle {
@@ -223,7 +226,7 @@
 
   @media (max-width: 1120px) {
     .earth{
-      margin-left: calc(50% - 550px);
+      /* margin-left: calc(50% - 550px); */
     }
      .collectiontitle {
         font-weight: 400;
@@ -234,21 +237,21 @@
   }
 
   @media (max-width: 992px) {
-     .earth img {
+     /* .earth img {
       width: 1100px;
       margin-bottom: -3px;
       margin-left: calc(50% - 496px);
       background-attachment: fixed;
-    }
+    } */
      .collectiontitle {
         font-weight: 400;
         font-size: 22px;
         line-height: 31px;
         margin-bottom: 0;
     }
-    .earth {
+    /* .earth {
       bottom: -800px;
-    }
+    } */
     .earth img:hover {
       /* width: 1100px;
       margin-bottom: -3px;
@@ -284,7 +287,7 @@
     line-height: 31px;
   }
   .earth:hover {
-    margin-bottom: -100px;
+    /* margin-bottom: -100px; */
 		cursor: pointer;
   }
 }
@@ -303,10 +306,10 @@
     margin-bottom: 0;
   }
 
-  .earth {
+  /* .earth {
     bottom: -1300px;
   }
-  
+   */
   .NFTCollection {
     width: 100%;
   }
