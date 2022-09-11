@@ -12,8 +12,8 @@ export default function InvestorCollection() {
       >
         <div className="investor">
           <div className="w-full flex flex-wrap justify-around lg:justify-between items-center">
-            <div className="title mx-3">Investor Collection</div>
-            <div className="relative my-3">
+            <div className="title mx-2 md: m-0">Investor Collection</div>
+            <div className="relative my-3 lg:my-2 md:my-1">
               <span className="collectiontitle">Collection:</span>
               <select>
                 <option>Mogul</option>
@@ -84,6 +84,45 @@ export default function InvestorCollection() {
           left: 1.2rem;
           color: rgba(255, 255, 255, 0.8);
         }
+        @media (max-width: 992px) {
+          .investor {
+            margin: 10px;
+            padding: 20px;
+          }
+          .title {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 31px;
+
+            color: rgba(255, 255, 255, 0.9);
+          }
+         }
+        @media (max-width: 576px) {
+          .investor {
+            margin: 10px;
+            padding: 20px;
+          }
+          .title {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 31px;
+
+            color: rgba(255, 255, 255, 0.9);
+          }
+         }
+         @media (max-width: 375px) {
+          .investor {
+            margin: 10px;
+            padding: 20px;
+          }
+          .title {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 31px;
+
+            color: rgba(255, 255, 255, 0.9);
+          }
+         }
       `}</style>
       </motion.div>
     </AnimatePresence>

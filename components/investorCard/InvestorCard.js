@@ -73,7 +73,7 @@ function InvestorCard({ cardTitle, cardDescription, handleClick }) {
           }
           .card-image {
             position: relative;
-            width: 466px;
+            width: 100%;
           }
           .image {
             width: 100%;
@@ -91,9 +91,11 @@ function InvestorCard({ cardTitle, cardDescription, handleClick }) {
             flex-direction: column;
             text-align: left;
           }
+
  					.card-image: hover .card-text {
             top: 200px;
 					}
+
           .card-title {
             font-family: "Michroma";
             font-style: normal;
@@ -113,6 +115,7 @@ function InvestorCard({ cardTitle, cardDescription, handleClick }) {
             line-height: 130%;
             color: rgba(255, 255, 255, 0.8);
           }
+
 					.card-image:hover .card-title {
 						font-size: 56px;
 						line-height: 80px;
@@ -123,16 +126,19 @@ function InvestorCard({ cardTitle, cardDescription, handleClick }) {
 						font-size: 18px;
 						line-height: 140%;
 					}
+
           .card-container:hover,
           .card-container:focus,
           .card-container:active {
             color: #15c3f4;
             cursor: pointer;
           }
+
 					.hover-view {
 						display: flex;
 						margin-top: 17px;
 					}
+
 					.hover-title {
 						font-family: 'Inter';
 						font-style: normal;
@@ -152,19 +158,26 @@ function InvestorCard({ cardTitle, cardDescription, handleClick }) {
             .card-container {
               margin: 30px;
             }
+
 						.card-text {
 							width: 410px;
+							top: 180px;
+						}
+						.card-image: hover .card-text {
+							top: 180px;
 						}
 						.card-title {
 							font-weight: 400;
 							font-size: 34px;
 							line-height: 31px;
 						}
+
 						.card-description {
 							font-weight: 400;
 							font-size: 15px;
 							line-height: 130%;
 						}
+
 						.card-image:hover .card-title {
 							font-size: 50px;
 							line-height: 80px;
@@ -182,31 +195,40 @@ function InvestorCard({ cardTitle, cardDescription, handleClick }) {
               width: 100%;
               margin: 10px;
             }
+
             .card-image {
               width: 100%;
             }
+
 						.card-text {
-							width: 380px;
+							width: 70vw;
+							top: 130px;
 						}
+						.card-image:hover .card-text {
+							top: 130px;
+						}
+
 						.card-title {
 							font-weight: 400;
 							font-size: 28px;
 							line-height: 31px;
 						}
+
 						.card-description {
 							font-weight: 400;
 							font-size: 15px;
 							line-height: 130%;
 						}
+
 						.card-image:hover .card-title {
-							font-size: 46px;
-							line-height: 80px;
+							font-size: 42px;
+							line-height: 60px;
 							color: #15C3F4;
 						}
 
 						.card-image:hover .card-description {
-								font-size: 17px;
-								line-height: 140%;
+								font-size: 15px;
+								line-height: 100%;
 							}
           }
 					 @media (max-width: 375px) {
@@ -214,31 +236,40 @@ function InvestorCard({ cardTitle, cardDescription, handleClick }) {
               width: 100%;
               margin: 10px;
             }
+
             .card-image {
               width: 100%;
             }
+
 						.card-text {
-							width: 380px;
+							top: 100px;
+							width: 250px;
+						}
+						
+						.card-image:hover .card-text {
+							top: 80px;
 						}
 						.card-title {
 							font-weight: 400;
 							font-size: 22px;
 							line-height: 31px;
 						}
+
 						.card-description {
 							font-weight: 400;
 							font-size: 14px;
 							line-height: 130%;
 						}
+
 						.card-image:hover .card-title {
 							font-size: 38px;
-							line-height: 80px;
+							line-height: 40px;
 							color: #15C3F4;
 						}
 
 						.card-image:hover .card-description {
 								font-size: 16px;
-								line-height: 140%;
+								line-height: 100%;
 							}
           }
         `}</style>
