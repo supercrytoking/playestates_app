@@ -65,7 +65,6 @@ function CollectionCard({ cardTitle, cardDescription, handleClick }) {
 
 				<style jsx>{`
           .card-container {
-            // position: relative;
             width: 466px;
             height: 100%;
             color: white;
@@ -82,8 +81,8 @@ function CollectionCard({ cardTitle, cardDescription, handleClick }) {
 
           .card-text {
             position: absolute;
-            width: 401px;
-            height: 147px;
+            // width: 401px;
+            // height: 147px;
             left: 30px;
             top: 200px;
 
@@ -91,7 +90,7 @@ function CollectionCard({ cardTitle, cardDescription, handleClick }) {
             flex-direction: column;
             text-align: left;
           }
- 					.card-container: hover .card-text {
+ 					.card-image: hover .card-text {
             top: 200px;
 					}
           .card-title {
@@ -105,12 +104,6 @@ function CollectionCard({ cardTitle, cardDescription, handleClick }) {
             margin-bottom: 10px;
           }
 
-					.card-text:hover .card-title {
-						font-size: 56px;
-						line-height: 80px;
-						color: #15C3F4;
-					}
-
           .card-description {
             font-family: "Inter";
             font-style: normal;
@@ -119,7 +112,13 @@ function CollectionCard({ cardTitle, cardDescription, handleClick }) {
             line-height: 130%;
             color: rgba(255, 255, 255, 0.8);
           }
-					.card-text:hover .card-description:hover {
+					.card-image:hover .card-title {
+						font-size: 56px;
+						line-height: 80px;
+						color: #15C3F4;
+					}
+
+					.card-image:hover .card-description {
 						font-size: 18px;
 						line-height: 140%;
 					}
@@ -143,6 +142,7 @@ function CollectionCard({ cardTitle, cardDescription, handleClick }) {
 						color: #FFFFFF;
 						padding-right: 20px;
 					}
+					
 					.arrows{
             margin-left: 10px;
 					}
@@ -151,7 +151,31 @@ function CollectionCard({ cardTitle, cardDescription, handleClick }) {
             .card-container {
               margin: 30px;
             }
-          }
+						.card-text {
+							width: 410px;
+						}
+						.card-title {
+							font-weight: 400;
+							font-size: 34px;
+							line-height: 31px;
+						}
+						.card-description {
+							font-weight: 400;
+							font-size: 15px;
+							line-height: 130%;
+						}
+						.card-image:hover .card-title {
+							font-size: 50px;
+							line-height: 80px;
+							color: #15C3F4;
+						}
+
+						.card-image:hover .card-description {
+								font-size: 17px;
+								line-height: 140%;
+							}
+						}
+
           @media (max-width: 576px) {
             .card-container {
               width: 100%;
@@ -160,6 +184,61 @@ function CollectionCard({ cardTitle, cardDescription, handleClick }) {
             .card-image {
               width: 100%;
             }
+						.card-text {
+							width: 380px;
+						}
+						.card-title {
+							font-weight: 400;
+							font-size: 28px;
+							line-height: 31px;
+						}
+						.card-description {
+							font-weight: 400;
+							font-size: 15px;
+							line-height: 130%;
+						}
+						.card-image:hover .card-title {
+							font-size: 46px;
+							line-height: 80px;
+							color: #15C3F4;
+						}
+
+						.card-image:hover .card-description {
+								font-size: 17px;
+								line-height: 140%;
+							}
+          }
+					 @media (max-width: 375px) {
+            .card-container {
+              width: 100%;
+              margin: 10px;
+            }
+            .card-image {
+              width: 100%;
+            }
+						.card-text {
+							width: 380px;
+						}
+						.card-title {
+							font-weight: 400;
+							font-size: 22px;
+							line-height: 31px;
+						}
+						.card-description {
+							font-weight: 400;
+							font-size: 14px;
+							line-height: 130%;
+						}
+						.card-image:hover .card-title {
+							font-size: 38px;
+							line-height: 80px;
+							color: #15C3F4;
+						}
+
+						.card-image:hover .card-description {
+								font-size: 16px;
+								line-height: 140%;
+							}
           }
         `}</style>
 			</motion.div>

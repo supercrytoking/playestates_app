@@ -89,14 +89,28 @@ function Introduction() {
               }
             }
 
-            @media screen and (max-width: 576px) {
+             @media screen and (max-width: 762px) {
               .description {
-                font-size: 18px;
+                font-size: 30px;
                 line-height: 26px;
               }
 
               .title {
-                font-size: 32px;
+                font-size: 52px;
+                line-height: 46px;
+
+                padding: 20px 0;
+              }
+            }
+
+            @media screen and (max-width: 576px) {
+              .description {
+                font-size: 24px;
+                line-height: 26px;
+              }
+
+              .title {
+                font-size: 35px;
                 line-height: 46px;
 
                 padding: 20px 0;
@@ -110,7 +124,9 @@ function Introduction() {
               }
 
               .title {
+                width: 333px;
                 font-size: 32px;
+                font-weight: 400;
                 line-height: 46px;
 
                 padding: 20px 0;

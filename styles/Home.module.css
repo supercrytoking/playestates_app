@@ -89,26 +89,22 @@
 }
 
 .earth {
-  position: fixed;
-  width: 100%;
-  bottom: -900px;
-  left: 0;
+  position: absolute;
   right: 0;
+  left: 0;
+  top: 0;
+  bottom: -110px;
   background-repeat: no-repeat;
   align-items: center;
   z-index: -4;
-  padding: 0 auto;
-  padding-bottom: 0;
-  margin: 0 auto;
+  margin-top: 100px;
 }
+
 .earth:hover{
 	cursor: pointer;
 }
-
-.earth img:hover {
-  /* width: 100%;
-  margin-bottom: -3px; */
-	cursor: pointer;
+.earth img {
+  max-width: fit-content;
 }
 
 .collectiontitle {
@@ -138,6 +134,7 @@
 
   border-radius: 10px;
 }
+
 .investorTitle{
   width: 686px;
   height: 37px;
@@ -154,6 +151,7 @@
 
   color: rgba(255, 255, 255, 0.9);
 }
+
 .NFTCollection {
   margin-top: 30px;
   max-width: 1603px;
@@ -206,37 +204,59 @@
     width: 100%;
   }
             
-@media (max-width: 992px) {
-  .earth {
-    bottom: -800px;
+  .logo {
+    height: 1em;
+    margin-left: 0.5rem;
   }
-  .earth img:hover {
-    /* width: 1100px;
-    margin-bottom: -3px;
-    margin-left: calc(50% - 550px);
-    background-attachment: fixed; */
-		cursor: pointer;
 
+  @media (max-width: 1120px) {
+    .earth{
+      margin-left: calc(50% - 550px);
+    }
+     .collectiontitle {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 31px;
+        margin-bottom: 0;
+    }
   }
-  .NFTCollection {
-    width: 100%;
-  }
-  .collections{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 100px;
-    overflow: hidden;
-    height: 100%;
-  }
-}
 
+  @media (max-width: 992px) {
+     .earth img {
+      width: 1100px;
+      margin-bottom: -3px;
+      margin-left: calc(50% - 496px);
+      background-attachment: fixed;
+    }
+     .collectiontitle {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 31px;
+        margin-bottom: 0;
+    }
+    .earth {
+      bottom: -800px;
+    }
+    .earth img:hover {
+      /* width: 1100px;
+      margin-bottom: -3px;
+      margin-left: calc(50% - 550px);
+      background-attachment: fixed; */
+      cursor: pointer;
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
+    }
+    .NFTCollection {
+      width: 100%;
+    }
+    .collections{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+      height: 100%;
+    }
+  }
 
 @media (max-width: 576px) {
   .grid {
@@ -246,18 +266,35 @@
   .NFTCollection {
     width: 100%;
   }
+   .collectiontitle {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 31px;
+  }
   .earth:hover {
     margin-bottom: -100px;
 		cursor: pointer;
-
   }
 }
 
 @media (max-width: 375px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }  
+  .arrowTitleContent{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .collectiontitle {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 31px;
+    margin-bottom: 0;
+  }
+
+  .earth {
+    bottom: -1300px;
+  }
+  
   .NFTCollection {
     width: 100%;
   }

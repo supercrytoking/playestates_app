@@ -143,18 +143,22 @@ export default function Home({ rotate }) {
 														</div>
 													</div>
 												</motion.div>
-												<motion.div
-													className={styles.earth}
-													initial={{ y: 1000, opacity: 0 }}
-													animate={{ y: 0, opacity: 1 }}
-													exit={{ y: -10, opacity: 0 }}
-													transition={{ duration: 2.5 }}
-													onClick={changeStyle}
-												>
-													<img src="/assets/image/earth2.png" alt="earth" />
-												</motion.div>
 											</div>
+
+											<motion.div
+												className={styles.earth}
+												initial={{ y: 1000, opacity: 0 }}
+												animate={{ y: 0, opacity: 1 }}
+												exit={{ y: -10, opacity: 0 }}
+												transition={{ duration: 2.5 }}
+												onClick={changeStyle}
+											>
+												<img src="/assets/image/earth2.png" alt="earth" />
+											</motion.div>
 										</motion.main>
+										{/* <div className="absolute inset-0 object-cover h-full videoIndex xl:h-full w-full">
+											<img src="/assets/image/earth2.png" alt="earth" />
+										</div> */}
 										<motion.div
 											className={styles.social}
 											initial={{ y: 1000, opacity: 0 }}
@@ -179,7 +183,6 @@ export default function Home({ rotate }) {
 											/>
 										</motion.div>
 									</>
-
 								)
 							case 1:
 								return (
@@ -215,36 +218,38 @@ export default function Home({ rotate }) {
 											</div>
 										</main>
 									</>
-
 								)
 							case 2:
-								return (<main className={styles.main}>
-									<div className={styles.mainContent1}>
+								return (
+									<>
+										<main className={styles.main}>
+											<div className={styles.mainContent1}>
 
-										<div className="p-8 lg:p-8 xl:p-16 2xl:p-20 mt-8">
-											<InvestorCollection />
+												<div className="p-8 lg:p-8 xl:p-16 2xl:p-20 mt-8">
+													<InvestorCollection />
 
-											<motion.div className={styles.NFTCollection}
-												initial={{ y: 1000, opacity: 0 }}
-												animate={{ y: 0, opacity: 1 }}
-												exit={{ y: -10, opacity: 0 }}
-												transition={{ duration: 2.5 }}>
-												<div className="m-12">
-													<div className="flex justify-around flex-wrap">
-														{nftCardData.cardDatas
-															? nftCardData.cardDatas.map((items, i) => (
-																<NFTcard
-																	cardData={items}
-																	key={`${items.imgAlt1}-${i}`}
-																/>
-															))
-															: "Loading..."}
-													</div>
+													<motion.div className={styles.NFTCollection}
+														initial={{ y: 1000, opacity: 0 }}
+														animate={{ y: 0, opacity: 1 }}
+														exit={{ y: -10, opacity: 0 }}
+														transition={{ duration: 2.5 }}>
+														<div className="m-12">
+															<div className="flex justify-around flex-wrap">
+																{nftCardData.cardDatas
+																	? nftCardData.cardDatas.map((items, i) => (
+																		<NFTcard
+																			cardData={items}
+																			key={`${items.imgAlt1}-${i}`}
+																		/>
+																	))
+																	: "Loading..."}
+															</div>
+														</div>
+													</motion.div>
 												</div>
-											</motion.div>
-										</div>
-									</div>
-								</main>)
+											</div>
+										</main>
+									</>)
 							default:
 								return null
 						}
